@@ -1,7 +1,6 @@
 package com.melendez.backendtaxes.services;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,11 +19,6 @@ public class TaxReturnService {
     
     @Autowired
     private TaxReturnRepository repo;
-
-    // Show all returns in the db
-    public List<TaxReturn> findAllReturns(){
-        return repo.findAll();
-    }
 
     // Show one return by email. If not present nothing is sent back
     public TaxReturn findReturnByEmail(String email){

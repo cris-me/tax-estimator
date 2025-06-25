@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.melendez.backendtaxes.models.IncomeSource;
 import com.melendez.backendtaxes.models.TaxReturn;
 import com.melendez.backendtaxes.services.TaxReturnService;
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -24,13 +23,6 @@ public class TaxReturnController {
 
     @Autowired
     TaxReturnService service;
-
-    // Show all returns in the db
-    @GetMapping
-    public ResponseEntity<List<TaxReturn>> findAllReturns() {
-        List<TaxReturn> returns = service.findAllReturns();
-        return new ResponseEntity<List<TaxReturn>>(returns, HttpStatus.OK);
-    }
 
     // Show one return by email. With the email in the path
     @GetMapping("/{email}")
