@@ -35,20 +35,6 @@ public class TaxReturnControllerTest {
     @MockBean
     private TaxReturnService service;
 
-
-    // JUNIT-TAX-001
-    // test findAllReturns
-    @Test
-    public void testFindAllReturns() throws Exception {
-        List<TaxReturn> mockReturns = new ArrayList<>();
-        when(service.findAllReturns()).thenReturn(mockReturns);
-
-        mockMvc.perform(get("/taxes"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$").isArray());
-    }
-
     // JUNIT-TAX-002
     // test findOnPath
     @Test

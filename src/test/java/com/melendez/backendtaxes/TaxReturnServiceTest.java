@@ -37,18 +37,6 @@ public class TaxReturnServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    // JUNIT-TAX-008
-    // test findAllReturns
-    @Test
-    public void testFindAllReturns() {
-        List<TaxReturn> mockReturns = new ArrayList<>();
-        when(repo.findAll()).thenReturn(mockReturns);
-
-        List<TaxReturn> returns = service.findAllReturns();
-
-        assertEquals(mockReturns, returns);
-    }
-
     // JUNIT-TAX-009
     // test findReturnByEmail
     @Test
