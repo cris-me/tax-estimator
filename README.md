@@ -1,6 +1,8 @@
-# Tax Estimator Service
+# 2022 Tax Estimator Service
 
-This project is a Java-based microservice for estimating taxes. It uses Spring Boot, MongoDB, and is built with Maven.
+This project is a Java-based microservice for estimating 2022 taxes. It uses Spring Boot, MongoDB, and is built with Maven.
+The tax estimate is simplified with only the Child Tax Credit, Credit for Other Dependents, and American Opportunity Tax Credit offered.
+For tax filing status only Single, Married Filing Jointly, Married Filing Separately, and Head of Household are offered.
 
 ---
 
